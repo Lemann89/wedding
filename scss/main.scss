@@ -1,0 +1,186 @@
+@import "fonts" ;
+@import "icons" ;
+@import "libs" ;
+@import "base" ;
+@import "vars" ;
+
+.container{
+    max-width: 1440px;
+    padding: 0px 72px 0px 72px;
+    margin: 0 auto;
+}
+.nav-container{
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    text-decoration: none;
+    color: $black;
+    font-weight: 700;
+    font-size: 18px;
+}
+.lock{
+    overflow: hidden;
+}
+.nav{
+    position: relative;
+    z-index:1;
+    &__burger{
+        transition: all 0.3s;
+        content: "";
+        height: 2px;
+        width: 32px;
+        border-radius: 4px;
+        background-color: $black;
+        position: relative;
+        z-index:2;
+        &::after {
+        @extend .nav__burger;
+        position: absolute;
+        transform: translateY(5px);
+        }
+        &::before {
+        @extend .nav__burger;
+        position: absolute;
+        transform: translateY(-5px);
+        }
+        @media only screen and (min-width: 768px) {
+        display: none;
+        }
+        &--active {
+            background-color: transparent;
+            &:before {
+              transform: rotate(45deg);
+              top: 0;
+            }
+            &:after {
+              transform: rotate(-45deg);
+              top: 0;
+            }
+          }
+    }
+    &__menu{
+        display: flex;
+        &__list{
+            display: flex;
+            align-items: center;
+            &--item {
+                margin-left: 24px;
+            }
+            &--item > a {
+                position: inline-block;
+                font-weight: 500;
+                text-decoration: none;
+                cursor: pointer;
+                color: $black;
+            }
+            &--item > a:after {
+                display: block;
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color: $black;
+                transition: width 0.3s ease-out;
+            }
+            &--item > a:hover:after,a:focus:after{
+                width: 100%;
+            }
+        }
+        &--heading {
+            margin: 24px 0px 48px 24px;
+            font-weight: 700;
+            font-size: 36px;
+            @media only screen and (min-width: 768px) {
+              display: none;
+            }
+        }
+        &--button{
+            margin-left: 24px;
+            height: 36px;
+            width: 116px;
+            background-color: transparent;
+            border: 2px solid $black;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        &--button:hover{
+            background-color: $black;
+            color: $white;
+            transition: 0.5s;
+        }
+        &--mobile-button{
+            margin-left: 24px;
+            height: 46px;
+            width: 161px;
+            color: $pink;
+            background-color: transparent;
+            border: 2px solid $pink;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+        &--line{
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+}
+.header{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    &__content{
+        &--title{
+            margin-top: 73px;
+            font-weight: 700;
+            font-size: 72px;
+        }
+        &--subtitle{
+            margin-top: 16px;
+            font-weight: 500;
+            font-size: 24px;
+        }
+        &--text{
+            margin-top: 40px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 23px;
+            width: 380px;
+        }
+        &--btn{
+            margin-top: 40px;
+            height: 46px;
+            width: 161px;
+            color: $pink;
+            background-color: transparent;
+            border: 2px solid $pink;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+        &--btn:hover{
+            background-color: $pink;
+            color: $white;
+            transition: 0.5s;
+        }
+    }
+    &__bg{
+        width: 100%;
+        height: 100%;
+    }
+    &__bg > img{
+        width: 100%;
+    }
+}
+
+@import "media" ; // Всегда в конце

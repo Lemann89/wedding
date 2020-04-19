@@ -1,0 +1,165 @@
+@import "vars";
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+
+@media (max-width: 1300px){
+    .header{
+        &__content{
+            &--title{
+                margin-top: 40px;
+                font-weight: 700;
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .header{
+        &__content{
+            &--title{
+                margin-top: 30px;
+                font-weight: 700;
+                font-size: 60px;
+            }
+            &--subtitle{
+                margin-top: 20px;
+                font-size: 24px;
+            }
+            &--text{
+            margin-top: 20px;
+            font-size: 16px;
+            }
+            &--btn{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 1100px){
+    .header{
+        &__content{
+            &--title{
+                margin-top: 20px;
+                font-weight: 700;
+                font-size: 50px;
+            }
+            &--subtitle{
+                margin-top: 16px;
+                font-size: 24px;
+            }
+            &--text{
+            margin-top: 16px;
+            font-size: 16px;
+            }
+            &--btn{
+                margin-top: 16px;
+            }
+        }
+    }
+}
+/* Medium Devices, Desktops */
+@media (max-width : 992px){
+    .container{
+        max-width: 1200px;
+        padding: 0px 36px 0px 36px;
+    }
+    .header{
+        &__content{
+            &--text{
+            margin-top: 16px;
+            font-size: 16px;
+            width: 300px;
+            }
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media (max-width : 768px){
+    .container{
+        max-width: 992px;
+        padding: 0;
+    }
+    .logo{
+        margin-left: 24px;
+    }
+    .header{
+        flex-direction: column;
+        &__bg{
+            order: -1;
+        }
+        &__bg > img{
+            width: 100%;
+        }
+        &__content{
+            margin-left: 16px;
+            &--text{
+                width: auto;
+                padding-top: 16px;
+                margin: auto;
+            }
+        }
+    }
+    .nav__active{
+        opacity: 1 !important;
+    }
+    .nav{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        flex-direction: column;
+        background-image: url(../img/menu.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        transition:0.3s ease-out;
+        &__menu{
+            flex-direction: column;
+            &--button{
+                display: none;
+            }
+            &__list{
+                display: block;
+                &--item {
+                    margin-bottom:40px;
+                }
+                &--item > a{
+                    font-weight: 700;
+                    font-size: 24px;
+                }
+                &--item > a:hover:after,a:focus:after{
+                    width: 0;
+                }
+            }
+            &--line{
+                position: absolute;
+                bottom: 0;
+                height: 4px;
+                width: 100%;
+                background-color: $pink;
+
+            }
+        }   
+        &__burger{
+            display: block;
+            margin-right: 24px;
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media (max-width : 480px){
+
+}
+
+/* Custom, iPhone Retina */
+@media (max-width : 320px){
+
+}
