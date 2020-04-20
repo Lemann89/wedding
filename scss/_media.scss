@@ -63,7 +63,7 @@
 /* Medium Devices, Desktops */
 @media (max-width : 992px){
     .container{
-        max-width: 1200px;
+        max-width: 1100px;
         padding: 0px 36px 0px 36px;
     }
     .header{
@@ -76,7 +76,11 @@
         }
     }
 }
-
+@media (max-width : 864px){
+    .nav__menu__list--item{
+        margin-left: 7px;
+    }
+}
 /* Small Devices, Tablets */
 @media (max-width : 768px){
     .container{
@@ -89,6 +93,7 @@
     .header{
         flex-direction: column;
         &__bg{
+            width: 100%;
             order: -1;
         }
         &__bg > img{
