@@ -24,6 +24,10 @@
 .lock{
     overflow: hidden;
 }
+.icon {
+    font-size: 70px;
+    color:$pink;
+}
 .nav{
     position: relative;
     z-index:1;
@@ -49,7 +53,7 @@
         @media only screen and (min-width: 768px) {
         display: none;
         }
-        &--active {
+        &-active {
             background-color: transparent;
             &:before {
               transform: rotate(45deg);
@@ -66,10 +70,10 @@
         &__list{
             display: flex;
             align-items: center;
-            &--item {
+            &-item {
                 margin-left: 24px;
             }
-            &--item > a {
+            &-item > a {
                 position: inline-block;
                 font-weight: 500;
                 font-size: 14px;
@@ -78,7 +82,7 @@
                 cursor: pointer;
                 color: $black;
             }
-            &--item > a:after {
+            &-item > a:after {
                 display: block;
                 content: "";
                 width: 0%;
@@ -86,11 +90,11 @@
                 background-color: $black;
                 transition: width 0.3s ease-out;
             }
-            &--item > a:hover:after,a:focus:after{
+            &-item > a:hover:after,a:focus:after{
                 width: 100%;
             }
         }
-        &--heading {
+        &-heading {
             margin: 24px 0px 48px 24px;
             font-weight: 700;
             font-size: 36px;
@@ -98,7 +102,7 @@
               display: none;
             }
         }
-        &--button{
+        &-button{
             margin-left: 24px;
             height: 36px;
             width: 116px;
@@ -109,12 +113,12 @@
             font-size: 16px;
             letter-spacing: 0.5px;
         }
-        &--button:hover{
+        &-button:hover{
             background-color: $black;
             color: $white;
             transition: 0.5s;
         }
-        &--mobile-button{
+        &-mobile-button{
             margin-left: 24px;
             height: 46px;
             width: 161px;
@@ -129,36 +133,36 @@
                 display: none;
             }
         }
-        &--line{
+        &-line{
             @media only screen and (min-width: 768px) {
                 display: none;
             }
         }
     }
 }
-.header{
+.lesson{
     display: flex;
     position: relative;
     justify-content: space-between;
     &__content{
-        &--title{
+        &-title{
             margin-top: 73px;
             font-weight: 700;
             font-size: 72px;
         }
-        &--subtitle{
+        &-subtitle{
             margin-top: 16px;
             font-weight: 500;
             font-size: 24px;
         }
-        &--text{
+        &-text{
             margin-top: 40px;
             font-weight: 400;
             font-size: 16px;
             line-height: 23px;
             width: 380px;
         }
-        &--btn{
+        &-btn{
             margin-top: 40px;
             height: 46px;
             width: 161px;
@@ -170,7 +174,7 @@
             font-size: 16px;
             letter-spacing: 0.5px;
         }
-        &--btn:hover{
+        &-btn:hover{
             background-color: $pink;
             color: $white;
             transition: 0.5s;
@@ -181,6 +185,119 @@
     }
     &__bg > img{
         width: 100%;
+    }
+}
+
+.services {
+    margin-top: 100px;
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    &__subtitle {
+        max-width: 668px;
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    &__cards {
+        min-width: 0;
+        margin-top: 48px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__cards .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__cards .slick-dots li{
+        list-style: none;
+        margin: 0 4px;
+    }
+    &__cards .slick-dots li.slick-active button{
+        //background-color: $pink;
+        background-color: $pink;
+    }
+    &__cards .slick-dots button{
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &__card {
+        min-width: 0;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
+        border-radius: 2px;
+        height: 620px;
+        &-title {
+            margin-left: 24px;
+            margin-top: 40px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-list {
+            margin-left: 25px;
+            margin-top: 24px;
+        }
+        &-item {
+            margin-top: 10px;
+        }
+        &-img {
+            width: 100%;
+        
+        }
+    }
+}
+.offer {
+    margin-top: 100px;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    &__subtitle {
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 668px;
+    }
+    &__advantages {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(25% - 30px);
+        margin-top: 51px;
+        align-items: center;
+        text-align: center;
+        &-subtitle {
+            max-width: 180px;
+            margin-top: 14px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
+.coaches {
+    margin-top: 100px;
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    &__subtitle {
+        margin-top: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 668px;
     }
 }
 
