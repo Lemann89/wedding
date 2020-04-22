@@ -116,6 +116,13 @@
     .nav__active{
         opacity: 1 !important;
     }
+    .burger {
+        margin-right: 14px;
+        &-menu {
+            display: block;
+            margin-right: 24px;
+        }
+    }
     .nav{
         position: fixed;
         width: 100%;
@@ -157,10 +164,6 @@
                 background-color: $pink;
 
             }
-        }   
-        &__burger{
-            display: block;
-            margin-right: 24px;
         }
     }
     .services {

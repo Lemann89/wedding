@@ -1,9 +1,10 @@
 const nav = document.querySelector('.nav');
-const burger = document.querySelector('.nav__burger');
+const burger = document.querySelector('.burger');
+const burgerMenu = document.querySelector('.burger-menu');
 
 burger.addEventListener('click', () => {
 	nav.classList.toggle('nav__active');
-	burger.classList.toggle('nav__burger-active');
+	burgerMenu.classList.toggle('burger-menu-active');
 	document.body.classList.toggle('lock');
 });
 

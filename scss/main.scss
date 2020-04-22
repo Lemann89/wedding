@@ -28,10 +28,10 @@
     font-size: 70px;
     color:$pink;
 }
-.nav{
-    position: relative;
-    z-index:1;
-    &__burger{
+.burger {
+    height: 15px;
+    width: 32px;
+    &-menu {
         transition: all 0.3s;
         content: "";
         height: 2px;
@@ -40,18 +40,16 @@
         background-color: $black;
         position: relative;
         z-index:2;
+        transform: translateY(5px);
         &::after {
-        @extend .nav__burger;
+        @extend .burger-menu;
         position: absolute;
         transform: translateY(5px);
         }
         &::before {
-        @extend .nav__burger;
+        @extend .burger-menu;
         position: absolute;
         transform: translateY(-5px);
-        }
-        @media only screen and (min-width: 768px) {
-        display: none;
         }
         &-active {
             background-color: transparent;
@@ -65,6 +63,13 @@
             }
           }
     }
+    @media only screen and (min-width: 768px) {
+        display: none;
+        }
+}
+.nav{
+    position: relative;
+    z-index:1;
     &__menu{
         display: flex;
         &__list{
