@@ -28,6 +28,32 @@
     font-size: 70px;
     color:$pink;
 }
+.start-btn {
+    margin-top: 40px;
+    height: 46px;
+    width: 161px;
+    color: $pink;
+    background-color: transparent;
+    border: 2px solid $pink;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    &--nav {
+        margin-left: 24px;
+        @media only screen and (min-width: 801px) {
+            display: none;
+        }
+    }
+    &--coach {
+        margin-top: 50%;
+    }
+}
+.start-btn:hover {
+    background-color: $pink;
+    color: $white;
+    transition: 0.5s;
+}
 .burger {
     height: 15px;
     width: 32px;
@@ -63,7 +89,7 @@
             }
           }
     }
-    @media only screen and (min-width: 769px) {
+    @media only screen and (min-width: 801px) {
         display: none;
         }
 }
@@ -103,7 +129,7 @@
             margin: 24px 0px 48px 24px;
             font-weight: 700;
             font-size: 36px;
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 801px) {
               display: none;
             }
         }
@@ -134,12 +160,12 @@
             font-weight: 600;
             font-size: 16px;
             letter-spacing: 0.5px;
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 801px) {
                 display: none;
             }
         }
         &-line{
-            @media only screen and (min-width: 768px) {
+            @media only screen and (min-width: 801px) {
                 display: none;
             }
         }
@@ -166,23 +192,6 @@
             font-size: 16px;
             line-height: 23px;
             width: 380px;
-        }
-        &-btn{
-            margin-top: 40px;
-            height: 46px;
-            width: 161px;
-            color: $pink;
-            background-color: transparent;
-            border: 2px solid $pink;
-            border-radius: 3px;
-            font-weight: 600;
-            font-size: 16px;
-            letter-spacing: 0.5px;
-        }
-        &-btn:hover{
-            background-color: $pink;
-            color: $white;
-            transition: 0.5s;
         }
     }
     &__bg{
@@ -221,7 +230,6 @@
         margin: 0 4px;
     }
     &__cards .slick-dots li.slick-active button{
-        //background-color: $pink;
         background-color: $pink;
     }
     &__cards .slick-dots button{
@@ -238,15 +246,15 @@
         box-sizing: border-box;
         box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
         border-radius: 2px;
-        height: 620px;
+        &-content {
+            padding: 10% 6% 18%;
+        }
         &-title {
-            margin-left: 24px;
-            margin-top: 40px;
             font-weight: 700;
             font-size: 24px;
         }
         &-list {
-            margin-left: 25px;
+
             margin-top: 24px;
         }
         &-item {
@@ -304,6 +312,139 @@
         font-weight: 400;
         max-width: 668px;
     }
+    &__cards {
+        position: relative;
+        margin-top: 48px;
+    }
+    &__cards .slick-dots {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__cards .slick-dots li{
+        list-style: none;
+        margin: 0 4px;
+    }
+    &__cards .slick-dots li.slick-active button{
+        background-color: $pink;
+    }
+    &__cards .slick-dots button{
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    &__card {
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-sizing: border-box;
+        box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
+        border-radius: 2px;
+        margin: 0 8px;
+        display: flex !important;
+        &-content {
+            padding: 43px 0px;
+            margin-left: 24px;
+        }
+        &-number {
+            font-weight: 700;
+            font-size: 16px;
+        }
+        &-title {
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        &-subtitle {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 16px;
+        }
+        &-list {
+            margin-top: 24px;
+        }
+        &-item {
+            margin-bottom: 16px;
+        }
+        &-exp {
+            opacity: 0.5;
+        }
+        &-btn {
+            margin-top: 88px;
+            height: 46px;
+            width: 161px;
+            color: $pink;
+            background-color: transparent;
+            border: 2px solid $pink;
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+        }
+    }
+    &__card-img {
+        & img {
+            width: 100%;
+        }
+    }
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    &__arrow {
+        border: none;
+        background-color: transparent;
+        &--prew {
+            transform: scale(-1, 1);
+        }
+    }
+    &__count {
+        display: flex;
+        align-items: center;
+        margin: 0px 15px;
+    }
+    &__mobile {
+        &-btn {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 50%;
+            border: 2px solid $pink;
+            margin-left: 80%;
+            & img {
+                width: 15px !important;
+                height: 15px;
+            }
+            @media only screen and (min-width: 551px) {
+                display: none;
+            }
+        }
+    }
 }
-
+.slick-disabled {
+    opacity: 0.3;
+}
+.footer {
+    margin-top: 100px;
+    background-color: $dark;
+    &__flex {
+        height: 88px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        text-decoration: none;
+        color: $white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    &__copyright {
+        color: $white;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
 @import "media" ; // Всегда в конце

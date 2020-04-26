@@ -37,6 +37,16 @@
             }
         }
     }
+    .start-btn {
+        &--coach{
+            margin-top: 30%;
+        }
+    }
+    // .services {
+    //     &__card {
+    //         height: 550px;
+    //     }
+    // }
 }
 @media (max-width: 1100px){
     .lesson{
@@ -57,6 +67,11 @@
             &-btn{
                 margin-top: 16px;
             }
+        }
+    }
+    .coaches {
+        &__count {
+            display: none;
         }
     }
 }
@@ -87,7 +102,7 @@
     }
 }
 /* Small Devices, Tablets */
-@media (max-width : 768px){
+@media (max-width : 800px){
     .container{
         max-width: 992px;
         padding: 0;
@@ -192,18 +207,35 @@
         }
     }
     .coaches{
-        &__title{
+        &__title {
             margin-left: 16px;
         }
-        &__subtitle{
+        &__subtitle {
             margin-left: 16px;
+        }
+    }
+    .footer {
+        margin-top: 50px;
+        &__flex {
+            padding: 0px 25px;
         }
     }
 }
 
-/* Extra Small Devices, Phones */
-@media (max-width : 480px){
-
+@media (max-width : 550px){
+    .coaches{
+        &__card {
+            display: block !important;
+        }
+        &__card img {
+            width: 100%;
+        }
+    }
+    .start-btn{
+        &--coach {
+            display: none;
+        }
+    }
 }
 
 /* Custom, iPhone Retina */
