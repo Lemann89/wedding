@@ -49,6 +49,9 @@
     // }
 }
 @media (max-width: 1100px){
+    .container {
+        padding: 0px 32px;
+    }
     .lesson{
         &__content{
             &-title{
@@ -105,33 +108,36 @@
 @media (max-width : 800px){
     .container{
         max-width: 992px;
-        padding: 0;
+        padding: 0px 16px;
     }
     .logo{
-        margin-left: 24px;
     }
     .lesson{
         flex-direction: column;
         &__bg{
-            width: 100%;
             order: -1;
+            //width: 100%;
+            margin: 0px -16px; 
         }
         &__bg > img{
             width: 100%;
         }
         &__content{
-            margin-left: 16px;
+            width: 100%;
+            padding: 24px 0px;
             &-text{
                 width: auto;
                 padding-top: 16px;
                 margin: auto;
+                font-size: 14px;
+            }
+            &-title{
+                font-size: 36px;
+            }
+            &-subtitle{
+                font-size: 14px;
             }
         }
-    }
-    .nav__active{
-        opacity: 1 !important;
-        width: 100% !important;
-        height: 100% !important;
     }
     .burger {
         margin-right: 14px;
@@ -183,41 +189,65 @@
             }
         }
     }
+    .nav__active{
+        opacity: 1 ;
+        width: 100% ;
+        height: 100% ;
+    }
     .services {
-        &__title{
-            margin-left: 16px;
+        margin-top: 56px;
+        &-title{
+            font-size: 36px;
         }
-        &__subtitle{
-            margin-left: 16px;
+        &-subtitle{
+            font-size: 14px;
         }
         &__card {
-            margin-left: 16px;
-            width: 1.95%;
+            margin-right: 16px;
+            &-content {
+                height: 175px;
+            }
+        }
+        &__cards {
+            margin: 22px -16px;
         }
     }
     .offer {
+        margin-top: 56px;
         &__item {
             width: calc(48% - 20px);
+            &-subtitle{
+                font-size: 14px;
+            }
         }
         &__title{
-            margin-left: 16px;
+            font-size: 36px;
         }
         &__subtitle{
-            margin-left: 16px;
+            font-size: 14px;
+            line-height: 23px;
         }
     }
-    .coaches{
-        &__title {
-            margin-left: 16px;
+    .coaches {
+        margin-top: 56px;
+        &__title{
+            font-size: 36px;
         }
-        &__subtitle {
-            margin-left: 16px;
+        &__subtitle{
+            font-size: 14px;
+            line-height: 23px;
+        }
+        &__cards{
+            margin: 8px -16px;
         }
     }
     .footer {
-        margin-top: 50px;
-        &__flex {
-            padding: 0px 25px;
+        margin-top: 56px;
+        &__logo{
+            font-size: 14px;
+        }
+        &__copyright{
+            font-size: 14px;
         }
     }
 }

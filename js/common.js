@@ -17,7 +17,8 @@ if(document.body.clientWidth <= 800){
 		$('.services__cards').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			variableWidth:true,
+			centerMode:true,
+			//variableWidth:true,
 			dots: true,
 			arrows: false
 		});
