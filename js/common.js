@@ -19,7 +19,7 @@ if(document.body.clientWidth <= 769){
 			slidesToScroll: 1,
 			centerMode:true,
 			dots: true,
-			infinite: false,
+			infinite: true,
 			arrows: false
 		});
 	});
