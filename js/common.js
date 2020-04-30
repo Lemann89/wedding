@@ -12,14 +12,14 @@ burger.addEventListener('click', () => {
 
 //Services Slider
 
-if(document.body.clientWidth <= 800){
+if(document.body.clientWidth <= 769){
 	$(document).ready(function(){
 		$('.services__cards').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			centerMode:true,
-			//variableWidth:true,
 			dots: true,
+			infinite: false,
 			arrows: false
 		});
 	});
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		nextArrow: '<button type="button" class="coaches__arrow coaches__arrow--next"><img src="img/arrow.svg" alt="arrow"></button>',
 		responsive: [
 			{
-				breakpoint: 1100,
+				breakpoint: 1101,
 				settings: {
 					slidesToScroll: 1,
 					arrows: false,

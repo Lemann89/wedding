@@ -42,11 +42,6 @@
             margin-top: 30%;
         }
     }
-    // .services {
-    //     &__card {
-    //         height: 550px;
-    //     }
-    // }
 }
 @media (max-width: 1100px){
     .container {
@@ -105,18 +100,15 @@
     }
 }
 /* Small Devices, Tablets */
-@media (max-width : 800px){
+@media (max-width : 768px){
     .container{
         max-width: 992px;
         padding: 0px 16px;
-    }
-    .logo{
     }
     .lesson{
         flex-direction: column;
         &__bg{
             order: -1;
-            //width: 100%;
             margin: 0px -16px; 
         }
         &__bg > img{
